@@ -21,7 +21,7 @@ import { CounterAnimation } from '@/components/Animations';
 import { ScribbleAnimation, FloatingScribbles } from '@/components/ScribbleAnimations';
 
 // Dynamic imports for better performance
-const LottieAnimation = dynamic(() => import('@/components/LottieAnimations').then(mod => ({ default: mod.LottieAnimation })), {
+const LottieAnimation = dynamic(() => import('@/components/LottieAnimations').then(mod => mod.LottieAnimation), {
   loading: () => <div className="w-24 h-24 bg-gradient-to-br from-accent to-accent-light rounded-full opacity-20" />,
   ssr: false,
 });
